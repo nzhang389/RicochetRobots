@@ -60,7 +60,7 @@ class BoardView: UIView {
 //        board = Board()
 //        drawRect()
 //    }
-//    
+
     func drawRobots(context: CGContext){
         let robots = myRobots.getRobots()
         for var x = 0; x < NUMROBOTS; x++ {
