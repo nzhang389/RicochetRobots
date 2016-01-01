@@ -10,30 +10,67 @@ import UIKit
 import SpriteKit
 
 class ViewController: UIViewController {
-    var board: Board?
+   // var board: Board?
     
-    @IBOutlet weak var boardView: BoardView!
-    let startPosition = CGPoint(x: 10, y: 10)
-
-
-    required init?(coder aDecoder: NSCoder) {
-        board = nil
-        super.init(coder: aDecoder)
-        initialize()
-
-    }
+    var colorSelected = 0
     
-    func initialize(){
-        board = Board()
-        for var x = 0; x < 8; x++ {
-            for var y = 0; y < 8; y++ {
-                //let tile =
-            }
+    @IBAction func colorSelection(sender: UIButton) {
+        switch sender.currentTitle! {
+        case "Red" :
+            colorSelected = RED
+            break
+        case "Blue" :
+            colorSelected = BLUE
+            break
+        case "Yellow" :
+            colorSelected = YELLOW
+            break
+        case "Green" :
+            colorSelected = GREEN
+            break
+        default:
+            break
         }
     }
     
+    
+    @IBAction func directionEntered(sender: UIButton) {
+        switch sender.currentTitle! {
+        case "Up" :
+            boardView.myRobots.calculateNumberOfSteps(colorSelected, direction: UP, myBoard: boardView.board!)
+            break
+        case "Down" :
+            boardView.myRobots.calculateNumberOfSteps(colorSelected, direction: DOWN, myBoard: boardView.board!)
+            break
+        case "Left" :
+            boardView.myRobots.calculateNumberOfSteps(colorSelected, direction: LEFT, myBoard: boardView.board!)
+            break
+        case "Right" :
+            boardView.myRobots.calculateNumberOfSteps(colorSelected, direction: RIGHT, myBoard: boardView.board!)
+            break
+        default:
+            break
+        }
+    }
+    
+    @IBOutlet weak var boardView: BoardView!
+    @IBAction func newBoard(sender: UIButton) {
+        boardView.newBoard()
+    }
+    @IBAction func newObjective(sender: UIButton) {
+        //boardView.newObjectives()
+    }
+//
+//
+//    required init?(coder aDecoder: NSCoder) {
+//        board = nil
+//        super.init(coder: aDecoder)
+//        initialize()
+//
+//    }
+
     override func viewDidLayoutSubviews() {
-        boardView.board = board
+//        boardView.board =
     }
     
     override func viewDidLoad() {

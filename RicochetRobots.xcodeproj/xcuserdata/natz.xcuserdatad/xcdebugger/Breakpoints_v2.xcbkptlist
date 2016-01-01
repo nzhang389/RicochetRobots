@@ -10,13 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RicochetRobots/Board.swift"
-            timestampString = "469532541.615024"
+            timestampString = "473228318.852034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "rotateTileRight(_:)"
-            landmarkType = "7">
+            startingLineNumber = "176"
+            endingLineNumber = "176">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,12 +24,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RicochetRobots/Board.swift"
-            timestampString = "468807294.252339"
+            timestampString = "473228318.852034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "Board"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "BoardQuarter"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,12 +40,123 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RicochetRobots/Board.swift"
-            timestampString = "469532541.615024"
+            timestampString = "471949897.722955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
-            landmarkName = "init(extraWalls:)"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "Board"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RicochetRobots.Board.possibleBoardPieces.getter : Swift.Dictionary&lt;Swift.Int, Swift.Array&lt;(Swift.Int, Swift.Int, RicochetRobots.BoardTile)&gt;&gt;"
+                  moduleName = "RicochetRobots"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/natz/Documents/RicochetRobots/RicochetRobots/RicochetRobots/Board.swift"
+                  timestampString = "471949901.03924"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RicochetRobots.Board.possibleBoardPieces.setter : Swift.Dictionary&lt;Swift.Int, Swift.Array&lt;(Swift.Int, Swift.Int, RicochetRobots.BoardTile)&gt;&gt;"
+                  moduleName = "RicochetRobots"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/natz/Documents/RicochetRobots/RicochetRobots/RicochetRobots/Board.swift"
+                  timestampString = "471949901.039614"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RicochetRobots.Board.possibleBoardPieces.materializeForSet : Swift.Dictionary&lt;Swift.Int, Swift.Array&lt;(Swift.Int, Swift.Int, RicochetRobots.BoardTile)&gt;&gt;"
+                  moduleName = "RicochetRobots"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/natz/Documents/RicochetRobots/RicochetRobots/RicochetRobots/Board.swift"
+                  timestampString = "471949901.040115"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RicochetRobots/Board.swift"
+            timestampString = "473121713.069315"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "init()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardView.swift"
+            timestampString = "473280593.026223"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "drawWalls(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardView.swift"
+            timestampString = "473280795.457445"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "drawObjective(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardView.swift"
+            timestampString = "473280593.026223"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "drawWalls(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,12 +167,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RicochetRobots/Board.swift"
-            timestampString = "469532541.615024"
+            timestampString = "473228318.852034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "init()"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "addObjective()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardView.swift"
+            timestampString = "473280795.457445"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "drawObjective(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RicochetRobots/ViewController.swift"
+            timestampString = "473283354.311819"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "directionEntered(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

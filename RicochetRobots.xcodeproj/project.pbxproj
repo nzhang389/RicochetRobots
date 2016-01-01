@@ -15,10 +15,8 @@
 		CD3AA7421BE1DC54007B87A7 /* RicochetRobotsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3AA7411BE1DC54007B87A7 /* RicochetRobotsTests.swift */; };
 		CD3AA74D1BE1DC54007B87A7 /* RicochetRobotsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3AA74C1BE1DC54007B87A7 /* RicochetRobotsUITests.swift */; };
 		CD3AA75B1BE1DCB1007B87A7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3AA75A1BE1DCB1007B87A7 /* Board.swift */; };
+		CD70F9B21C2A603700580BC8 /* RobotBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD70F9B11C2A603700580BC8 /* RobotBrain.swift */; };
 		CD7A64BB1BE8350C004F648A /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7A64BA1BE8350C004F648A /* BoardView.swift */; };
-		CD7A64BF1BE83F64004F648A /* BlankTile.png in Resources */ = {isa = PBXBuildFile; fileRef = CD7A64BE1BE83F64004F648A /* BlankTile.png */; };
-		CDFD4F881BF158F200F41656 /* HorizontalWall.png in Resources */ = {isa = PBXBuildFile; fileRef = CDFD4F871BF158F200F41656 /* HorizontalWall.png */; };
-		CDFD4F8A1BF158FC00F41656 /* VerticalWall.png in Resources */ = {isa = PBXBuildFile; fileRef = CDFD4F891BF158FC00F41656 /* VerticalWall.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +51,8 @@
 		CD3AA74C1BE1DC54007B87A7 /* RicochetRobotsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicochetRobotsUITests.swift; sourceTree = "<group>"; };
 		CD3AA74E1BE1DC54007B87A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD3AA75A1BE1DCB1007B87A7 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		CD70F9B11C2A603700580BC8 /* RobotBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotBrain.swift; sourceTree = "<group>"; };
 		CD7A64BA1BE8350C004F648A /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardView.swift; path = ../BoardView.swift; sourceTree = "<group>"; };
-		CD7A64BE1BE83F64004F648A /* BlankTile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlankTile.png; path = ../BlankTile.png; sourceTree = "<group>"; };
-		CDFD4F871BF158F200F41656 /* HorizontalWall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HorizontalWall.png; sourceTree = "<group>"; };
-		CDFD4F891BF158FC00F41656 /* VerticalWall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VerticalWall.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,13 +105,11 @@
 			children = (
 				CD7A64BA1BE8350C004F648A /* BoardView.swift */,
 				CD3AA75A1BE1DCB1007B87A7 /* Board.swift */,
-				CD7A64BE1BE83F64004F648A /* BlankTile.png */,
+				CD70F9B11C2A603700580BC8 /* RobotBrain.swift */,
 				CD3AA72C1BE1DC54007B87A7 /* AppDelegate.swift */,
 				CD3AA72E1BE1DC54007B87A7 /* ViewController.swift */,
 				CD3AA7301BE1DC54007B87A7 /* Main.storyboard */,
 				CD3AA7331BE1DC54007B87A7 /* Assets.xcassets */,
-				CDFD4F891BF158FC00F41656 /* VerticalWall.png */,
-				CDFD4F871BF158F200F41656 /* HorizontalWall.png */,
 				CD3AA7351BE1DC54007B87A7 /* LaunchScreen.storyboard */,
 				CD3AA7381BE1DC54007B87A7 /* Info.plist */,
 			);
@@ -244,10 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD3AA7371BE1DC54007B87A7 /* LaunchScreen.storyboard in Resources */,
-				CDFD4F8A1BF158FC00F41656 /* VerticalWall.png in Resources */,
-				CDFD4F881BF158F200F41656 /* HorizontalWall.png in Resources */,
 				CD3AA7341BE1DC54007B87A7 /* Assets.xcassets in Resources */,
-				CD7A64BF1BE83F64004F648A /* BlankTile.png in Resources */,
 				CD3AA7321BE1DC54007B87A7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD70F9B21C2A603700580BC8 /* RobotBrain.swift in Sources */,
 				CD3AA72F1BE1DC54007B87A7 /* ViewController.swift in Sources */,
 				CD7A64BB1BE8350C004F648A /* BoardView.swift in Sources */,
 				CD3AA72D1BE1DC54007B87A7 /* AppDelegate.swift in Sources */,
