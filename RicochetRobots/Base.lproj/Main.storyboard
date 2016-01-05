@@ -42,16 +42,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQp-V1-3KS">
                                 <rect key="frame" x="20" y="550" width="44" height="30"/>
                                 <state key="normal" title="Yellow"/>
+                                <connections>
+                                    <action selector="colorSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fhw-hh-KPi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PK-mn-QGS">
                                 <rect key="frame" x="58" y="508" width="42" height="30"/>
                                 <state key="normal" title="Green"/>
+                                <connections>
+                                    <action selector="colorSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UZI-6n-TRG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwL-oW-8ro">
                                 <rect key="frame" x="72" y="550" width="31" height="30"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Blue"/>
                                 <connections>
+                                    <action selector="colorSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AVW-Uz-kx3"/>
                                     <outletCollection property="gestureRecognizers" destination="Ie1-up-QoJ" appends="YES" id="HjU-bi-JfZ"/>
                                 </connections>
                             </button>

@@ -99,7 +99,18 @@ class Board{
             numbers.append(x);
         }
         for var x = 0; x < 4; x++ {
-            piecesToUse.append(numbers.removeAtIndex(Int(arc4random_uniform(UInt32(NUMPIECES - x)))))
+            let nextRandom = Int(arc4random_uniform(UInt32(NUMPIECES - 2 * x)))
+            var nextNum = 0
+            //removes the board and its opposite side, adds the chosen one onto the pieces
+            if(nextRandom % 2 == 0){
+                nextNum = numbers.removeAtIndex(nextRandom)
+                numbers.removeAtIndex(nextRandom)
+            }
+            else {
+                numbers.removeAtIndex(nextRandom - 1)
+                nextNum = numbers.removeAtIndex(nextRandom - 1)
+            }
+            piecesToUse.append(nextNum)
         }
         return piecesToUse
     }
@@ -126,38 +137,40 @@ class Board{
             (4,6,BoardTile(u: false, d: true, l: false, r: true, c: 2)),
             (5,0,BoardTile(u: false, d: true, l: false, r: false)),
             (6,3,BoardTile(u: false, d: true, l: true, r: false, c: 0))]
-        possibleBoardPieces[1] = [(0,3,BoardTile(u: false, d: false, l: false, r: true)),
+        possibleBoardPieces[2] = [(0,3,BoardTile(u: false, d: false, l: false, r: true)),
             (1,5,BoardTile(u: false, d: true, l: false, r: true, c: 3)),
             (2,1,BoardTile(u: false, d: true, l: true, r: false, c: 1)),
             (3,0,BoardTile(u: false, d: true, l: false, r: false)),
             (4,6,BoardTile(u: true, d: false, l: true, r: false, c: 2)),
             (6,2,BoardTile(u: true, d: false, l: false, r: true, c: 0))]
-        possibleBoardPieces[2] = [(0,3,BoardTile(u: false, d: false, l: false, r: true)),
+        possibleBoardPieces[4] = [(0,3,BoardTile(u: false, d: false, l: false, r: true)),
             (2,5,BoardTile(u: false, d: true, l: false, r: true, c: BLUE)),
             (4,0,BoardTile(u: false, d: true, l: false, r: false)),
             (4,2,BoardTile(u: true, d: false, l: false, r: true, c: GREEN)),
             (5,7,BoardTile(u: false, d: true, l: true, r: false, c: RED)),
             (6,1,BoardTile(u: true, d: false, l: true, r: false, c: YELLOW))]
-        possibleBoardPieces[3] = [(0,3,BoardTile(u: false, d: false, l: false, r: true)),
+        possibleBoardPieces[6] = [(0,3,BoardTile(u: false, d: false, l: false, r: true)),
             (1,6,BoardTile(u: false, d: true, l: true, r: false, c: BLUE)),
             (3,1,BoardTile(u: true, d: false, l: false, r: true, c: YELLOW)),
             (4,5,BoardTile(u: true, d: false, l: true, r: false, c: GREEN)),
             (5,2,BoardTile(u: false, d: true, l: false, r: true, c: RED)),
             (5,7,BoardTile(u: false, d: true, l: false, r: true, c: ANYCOLOR)),
             (6,0,BoardTile(u: false, d: true, l: false, r: false))]
-        possibleBoardPieces[4] = [(0,4,BoardTile(u: false, d: false, l: false, r: true)),
+        
+        //0 and 1 will be opposite sides of the same board
+        possibleBoardPieces[1] = [(0,4,BoardTile(u: false, d: false, l: false, r: true)),
             (1,6,BoardTile(u: false, d: true, l: false, r: true, c: YELLOW)),
             (2,1,BoardTile(u: true, d: false, l: true, r: false, c: GREEN)),
             (5,0,BoardTile(u: false, d: true, l: false, r: false)),
             (5,6,BoardTile(u: true, d: false, l: false, r: true, c: BLUE)),
             (6,3,BoardTile(u: false, d: true, l: true, r: false, c: RED))]
-        possibleBoardPieces[5] = [(0,4,BoardTile(u: false, d: false, l: false, r: true)),
+        possibleBoardPieces[3] = [(0,4,BoardTile(u: false, d: false, l: false, r: true)),
             (1,2,BoardTile(u: true, d: false, l: true, r: false, c: YELLOW)),
             (3,6,BoardTile(u: false, d: true, l: true, r: false, c: BLUE)),
             (4,0,BoardTile(u: false, d: true, l: false, r: false)),
             (5,4,BoardTile(u: true, d: false, l: false, r: true, c: RED)),
             (6,1,BoardTile(u: false, d: true, l: false, r: true, c: GREEN))]
-        possibleBoardPieces[6] = [(0,3,BoardTile(u: false, d: false, l: false, r: true)),
+        possibleBoardPieces[5] = [(0,3,BoardTile(u: false, d: false, l: false, r: true)),
             (1,1,BoardTile(u: false, d: true, l: true, r: false, c: RED)),
             (2,6,BoardTile(u: true, d: false, l: false, r: true, c: GREEN)),
             (4,2,BoardTile(u: false, d: true, l: false, r: true, c: BLUE)),

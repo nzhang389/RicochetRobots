@@ -37,16 +37,17 @@ class ViewController: UIViewController {
     @IBAction func directionEntered(sender: UIButton) {
         switch sender.currentTitle! {
         case "Up" :
-            boardView.myRobots.calculateNumberOfSteps(colorSelected, direction: UP, myBoard: boardView.board!)
+            boardView.moveInDirection(colorSelected, dir: UP)
             break
         case "Down" :
-            boardView.myRobots.calculateNumberOfSteps(colorSelected, direction: DOWN, myBoard: boardView.board!)
+            boardView.moveInDirection(colorSelected, dir: DOWN)
             break
         case "Left" :
-            boardView.myRobots.calculateNumberOfSteps(colorSelected, direction: LEFT, myBoard: boardView.board!)
+            boardView.moveInDirection(colorSelected, dir: LEFT)
             break
         case "Right" :
-            boardView.myRobots.calculateNumberOfSteps(colorSelected, direction: RIGHT, myBoard: boardView.board!)
+            boardView.moveInDirection(colorSelected, dir: RIGHT)
+            
             break
         default:
             break
@@ -54,11 +55,13 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet weak var boardView: BoardView!
+    
     @IBAction func newBoard(sender: UIButton) {
         boardView.newBoard()
     }
+    
     @IBAction func newObjective(sender: UIButton) {
-        //boardView.newObjectives()
+        boardView.newObjectives()
     }
 //
 //

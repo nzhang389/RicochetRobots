@@ -17,6 +17,8 @@ class BoardView: UIView {
     var contentSize: CGFloat
     var cellSize: CGFloat
     var cellDict = [NSInteger:CGImageRef]()
+    var context: CGContext?
+    let timer = NSTimer()
     
     override func layoutSubviews() {
         myRobots = RobotBrain()
@@ -25,6 +27,7 @@ class BoardView: UIView {
         startY = 0
         contentSize = frame.width
         cellSize = contentSize / CGFloat(16)
+        context = nil
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -34,6 +37,7 @@ class BoardView: UIView {
         startY = 0
         contentSize = 0
         cellSize = 0
+        context = nil
         super.init(coder: aDecoder)
     }
     
@@ -41,27 +45,47 @@ class BoardView: UIView {
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
         // Drawing code
-        let context = UIGraphicsGetCurrentContext()
-        
-        drawBoard(context!)
-        drawObjective(context!)
-        drawRobots(context!)
-        drawWalls(context!)
+        context = UIGraphicsGetCurrentContext()
+        drawBoard()
+        drawObjective()
+        drawRobots()
+        drawWalls()
     }
     
-//    func newObjectives(){
-//        board?.addObjective()
-//        drawObjective()
-//        drawWalls();
-//        //CAN'T GIVE HIM CONTEXT
-//    }
-//    
-//    func newBoard(){
-//        board = Board()
-//        drawRect()
-//    }
+    func newObjectives(){
+        board?.addObjective()
+        self.setNeedsDisplay()
+    }
+    
+    func newBoard(){
+        board = Board()
+        myRobots = RobotBrain()
+        self.setNeedsDisplay()
+    }
+    
+    func moveInDirection(color: Int, dir: Int){
+        let numberOfSteps = myRobots.calculateNumberOfSteps(color, direction: dir, myBoard: board!)
+        self.setNeedsDisplay()
+    }
 
-    func drawRobots(context: CGContext){
+    
+    func drawBoard(){
+        resetStartingPoint()
+        let image = UIImage(named: "BlankTile.png")?.CGImage
+        for var row = 0; row < 16; row++ {
+            for var col = 0 ; col < 16; col++ {
+                //remake the walls so i print them onto the grid after doing all the blank tiles
+                CGContextDrawImage(context, CGRect(x: startX, y: startY, width: cellSize, height: cellSize), image)
+                //let hashValue = board!.boardArray[row, col].getHash()
+                
+                startX += cellSize;
+            }
+            startX = 0;
+            startY += cellSize;
+        }
+    }
+    
+    func drawRobots(){
         let robots = myRobots.getRobots()
         for var x = 0; x < NUMROBOTS; x++ {
             resetStartingPoint()
@@ -90,23 +114,9 @@ class BoardView: UIView {
         }
     }
     
-    func drawBoard(context: CGContext){
-        resetStartingPoint()
-        let image = UIImage(named: "BlankTile.png")?.CGImage
-        for var row = 0; row < 16; row++ {
-            for var col = 0 ; col < 16; col++ {
-                //remake the walls so i print them onto the grid after doing all the blank tiles
-                CGContextDrawImage(context, CGRect(x: startX, y: startY, width: cellSize, height: cellSize), image)
-                //let hashValue = board!.boardArray[row, col].getHash()
-                
-                startX += cellSize;
-            }
-            startX = 0;
-            startY += cellSize;
-        }
-    }
+
     
-    func drawWalls(context: CGContext){
+    func drawWalls(){
         resetStartingPoint()
         let horizWall = UIImage(named: "HorizontalWall.png")?.CGImage
         let vertWall = UIImage(named: "VerticalWall.png")?.CGImage
@@ -136,7 +146,7 @@ class BoardView: UIView {
         }
     }
     
-    func drawObjective(context: CGContext){
+    func drawObjective(){
         resetStartingPoint()
         let color = board!.getObjective().0
         let position = board!.getObjective().1
