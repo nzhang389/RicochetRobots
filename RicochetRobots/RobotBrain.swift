@@ -37,7 +37,7 @@ class RobotBrain{
         return robots
     }
     
-    func calculateNumberOfSteps(robotIndex: Int, direction: Int, myBoard: Board) -> Int {
+    func calculateNumberOfSteps(robotIndex: Int, direction: Int, inout atObjective: Bool, myBoard: Board) -> Int {
         var currentPosition = robotPosition(robotIndex)
         //xIndex are the ones going up and down, y is left to right
         //x is first 2 numbers, y is last 2
@@ -47,6 +47,10 @@ class RobotBrain{
             numSteps++
         }
         robots[robotIndex] = currentPosition
+        let currentTile = myBoard[currentPosition/100, currentPosition%100];
+        if(currentTile.isTheObjective() && robotIndex == currentTile.Color()){
+            atObjective = true;
+        }
         return numSteps
     }
     

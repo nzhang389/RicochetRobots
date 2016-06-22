@@ -69,10 +69,6 @@
                                     <action selector="directionEntered:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hbR-kN-MEL"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vky-bD-OtW" customClass="BoardView" customModule="RicochetRobots" customModuleProvider="target">
-                                <rect key="frame" x="20" y="28" width="560" height="443"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoc-Q8-wau">
                                 <rect key="frame" x="153" y="550" width="39" height="30"/>
                                 <state key="normal" title="Down"/>
@@ -94,6 +90,16 @@
                                     <action selector="directionEntered:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eke-Py-Z6o"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number of Moves: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brS-kT-lod">
+                                <rect key="frame" x="20" y="479" width="206" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vky-bD-OtW" customClass="BoardView" customModule="RicochetRobots" customModuleProvider="target">
+                                <rect key="frame" x="20" y="28" width="560" height="443"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -106,6 +112,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="vky-bD-OtW" secondAttribute="trailing" id="IBE-GD-rdC"/>
                             <constraint firstItem="6yq-XG-J3p" firstAttribute="top" secondItem="EGW-a2-Doa" secondAttribute="bottom" constant="8" id="ItA-MN-44A"/>
                             <constraint firstItem="Y6z-UL-4dF" firstAttribute="leading" secondItem="jGr-Uu-VZ1" secondAttribute="trailing" constant="8" id="Ms8-38-QKl"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="brS-kT-lod" secondAttribute="leading" id="N2C-dk-QiU"/>
                             <constraint firstItem="Uoc-Q8-wau" firstAttribute="top" secondItem="B1b-p2-Dcj" secondAttribute="bottom" constant="-11" id="OjW-8I-CPT"/>
                             <constraint firstItem="wQp-V1-3KS" firstAttribute="top" secondItem="AzX-Y3-ysa" secondAttribute="bottom" constant="12" id="Ojz-H2-fvd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uoc-Q8-wau" secondAttribute="bottom" constant="20" id="PHI-ye-v8q"/>
@@ -117,6 +124,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="6yq-XG-J3p" secondAttribute="trailing" constant="24" id="iax-iv-miH"/>
                             <constraint firstItem="B1b-p2-Dcj" firstAttribute="top" secondItem="jGr-Uu-VZ1" secondAttribute="bottom" constant="-7" id="ln4-Wu-WyR"/>
                             <constraint firstAttribute="leadingMargin" secondItem="AzX-Y3-ysa" secondAttribute="leading" id="m59-mk-xzf"/>
+                            <constraint firstItem="8PK-mn-QGS" firstAttribute="top" secondItem="brS-kT-lod" secondAttribute="bottom" constant="8" id="oUp-zI-Wgd"/>
                             <constraint firstItem="8PK-mn-QGS" firstAttribute="leading" secondItem="AzX-Y3-ysa" secondAttribute="trailing" constant="8" id="pkG-kE-vqM"/>
                             <constraint firstItem="Uoc-Q8-wau" firstAttribute="leading" secondItem="B1b-p2-Dcj" secondAttribute="trailing" constant="-1" id="rfu-iV-GPz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pwL-oW-8ro" secondAttribute="bottom" constant="20" id="tw7-qX-Hhb"/>
@@ -128,12 +136,13 @@
                     </view>
                     <connections>
                         <outlet property="boardView" destination="vky-bD-OtW" id="kjY-rg-PSz"/>
+                        <outlet property="numMovesLabel" destination="brS-kT-lod" id="bUZ-MM-c7s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="Ie1-up-QoJ"/>
             </objects>
-            <point key="canvasLocation" x="510" y="312"/>
+            <point key="canvasLocation" x="412" y="320"/>
         </scene>
     </scenes>
 </document>

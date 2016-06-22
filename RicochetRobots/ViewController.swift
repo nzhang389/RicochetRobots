@@ -13,6 +13,9 @@ class ViewController: UIViewController {
    // var board: Board?
     
     var colorSelected = 0
+    var numMoves = 0;
+    
+    @IBOutlet weak var numMovesLabel: UILabel!
     
     @IBAction func colorSelection(sender: UIButton) {
         switch sender.currentTitle! {
@@ -35,33 +38,42 @@ class ViewController: UIViewController {
     
     
     @IBAction func directionEntered(sender: UIButton) {
+        var reachedObjective = false;
         switch sender.currentTitle! {
         case "Up" :
-            boardView.moveInDirection(colorSelected, dir: UP)
+            reachedObjective = boardView.moveInDirection(colorSelected, dir: UP)
             break
         case "Down" :
-            boardView.moveInDirection(colorSelected, dir: DOWN)
+            reachedObjective = boardView.moveInDirection(colorSelected, dir: DOWN)
             break
         case "Left" :
-            boardView.moveInDirection(colorSelected, dir: LEFT)
+            reachedObjective = boardView.moveInDirection(colorSelected, dir: LEFT)
             break
         case "Right" :
-            boardView.moveInDirection(colorSelected, dir: RIGHT)
+            reachedObjective = boardView.moveInDirection(colorSelected, dir: RIGHT)
             
             break
         default:
             break
         }
+        numMoves++;
+        if(reachedObjective){
+            boardView.newObjectives();
+            numMoves = 0;
+        }
+        numMovesLabel.text = "Number of Moves: " + String(numMoves);
     }
     
     @IBOutlet weak var boardView: BoardView!
     
     @IBAction func newBoard(sender: UIButton) {
         boardView.newBoard()
+        numMoves = 0;
     }
     
     @IBAction func newObjective(sender: UIButton) {
         boardView.newObjectives()
+        numMoves = 0;
     }
 //
 //

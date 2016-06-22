@@ -63,9 +63,14 @@ class BoardView: UIView {
         self.setNeedsDisplay()
     }
     
-    func moveInDirection(color: Int, dir: Int){
-        let numberOfSteps = myRobots.calculateNumberOfSteps(color, direction: dir, myBoard: board!)
+    func moveInDirection(color: Int, dir: Int) -> Bool{
+        var reachedObjective = false;
+        myRobots.calculateNumberOfSteps(color, direction: dir, atObjective: &reachedObjective, myBoard: board!)
+        if(reachedObjective){
+            return true;
+        }
         self.setNeedsDisplay()
+        return false;
     }
 
     
